@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:MobileApp.Views"
+             x:Class="MobileApp.Views.BlogsPage"
+             Title="Blogs">
+
+    <d:ContentPage.BindingContext>
+        <local:BlogsPage></local:BlogsPage>
+    </d:ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <CollectionView x:Name="ItemsView"
+                        SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Frame HasShadow="false" BorderColor="Black" CornerRadius="5">
+                            <Label Text="{Binding Url}"></Label>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.EmptyView>
+                <StackLayout>
+                    <Label VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                           Text="No Blogs yet"></Label>
+                </StackLayout>
+            </CollectionView.EmptyView>
+        </CollectionView>
+    </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"></ToolbarItem>
+        <ToolbarItem Text="Delete All"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+</ContentPage>

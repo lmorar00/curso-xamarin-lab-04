@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:xamarin="http://schemas.microsoft.com/winfx/2009/xaml"
+             xamarin:Class="MobileApp.Views.ToDosPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Clear" Order="Primary" xamarin:Name="toolbarItemClear" />
+        <ToolbarItem Text="Refresh" Order="Secondary" xamarin:Name="toolbarItemRefresh" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" xamarin:Name="Root">
+            <StackLayout xamarin:Name="ItemsContainer">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox IsChecked="True" />
+                            <Label Text="{Binding Title}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

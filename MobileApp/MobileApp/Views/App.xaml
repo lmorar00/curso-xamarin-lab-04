@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Views.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Coral"></Setter>
+            </Style>
+            <Style TargetType="Button"
+                   x:Key="ToDo">
+                <Setter Property="BackgroundColor" Value="Aquamarine"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
